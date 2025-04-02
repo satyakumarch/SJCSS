@@ -26,7 +26,7 @@ const Services = () => {
       title: "Science Labs",
       description: "Our fully equipped science laboratories support practical learning in physics, chemistry, and biology. Modern equipment and safety protocols ensure an optimal learning environment.",
       icon: <Microscope className="h-8 w-8 text-primary" />,
-      image: "phylab.jpg"
+      image: "lab.jpg"
     },
     {
       title: "Physics Lab",

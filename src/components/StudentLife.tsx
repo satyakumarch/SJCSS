@@ -16,7 +16,7 @@ const StudentLife = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1501286353178-1ec881814838"
+              src="janche.jpg"
               alt="Sports Activities"
               className="w-full h-48 object-cover"
             />
@@ -33,7 +33,7 @@ const StudentLife = () => {
 
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+              src="cloths.jpg"
               alt="Arts & Culture"
               className="w-full h-48 object-cover"
             />
@@ -50,7 +50,7 @@ const StudentLife = () => {
 
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <img
-              src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81"
+              src="treacher.jpg"
               alt="Club Activities"
               className="w-full h-48 object-cover"
             />

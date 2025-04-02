@@ -5,18 +5,25 @@ const Academics = () => {
   const [currentImage1, setCurrentImage1] = useState(0);
   const campusImages = [
     "janakpur.jpg",
-    "kaka.jpg",
-    "kaushal.jpg", 
-    "omkar.jpg"
+    "butwal.jpg",
+    "tour1.jpg", 
+    "tour2.jpg",
+    "tour3jpg.jpg",
+    "tour4.jpg",
+  
+
   ];
 
   // Second slideshow state
   const [currentImage2, setCurrentImage2] = useState(0);
   const activityImages = [
     "swarshati.jpg",
-    "activity2.jpg",
-    "activity3.jpg",
-    "activity4.jpg"
+    "Activityg.jpg",
+    "class.jpg",
+    "exam.jpg",
+    "exam1.jpg",
+    "exam2.jpg",
+
   ];
 
   // Effect for first slideshow
