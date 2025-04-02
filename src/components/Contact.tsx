@@ -51,15 +51,15 @@ const Contact = () => {
               <div className="space-y-4">
                 <p className="flex items-center text-gray-600">
                   <span className="font-semibold mr-2">Address:</span>
-                  123 School Street, City, State 12345
+                 Laxmanpur , Shivraj Muncipality ,Kapilvastu, Nepal
                 </p>
                 <p className="flex items-center text-gray-600">
                   <span className="font-semibold mr-2">Phone:</span>
-                  (123) 456-7890
+                  +977 9807585951
                 </p>
                 <p className="flex items-center text-gray-600">
                   <span className="font-semibold mr-2">Email:</span>
-                  info@schoolname.edu
+                  info@janchetana.edu
                 </p>
               </div>
             </div>
