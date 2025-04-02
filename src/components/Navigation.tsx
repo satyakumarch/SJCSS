@@ -21,7 +21,7 @@ const Navigation = () => {
   const navLinks = [
     { title: "Home", href: "/" },
     { title: "About Us", href: "/about" },
-    { title: "Admissions", href: "/admissions" },
+    { title: "Services", href: "/services" },
     { title: "Academics", href: "/academics" },
     { title: "Student Life", href: "/student-life" },
     { title: "Alumni", href: "/alumni" },

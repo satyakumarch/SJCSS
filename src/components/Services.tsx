@@ -14,31 +14,31 @@ const Services = () => {
       title: "Student Computer Lab",
       description: "Our state-of-the-art computer labs are equipped with the latest technology and software to support your learning needs. Students have access to high-speed internet and specialized programs for various courses.",
       icon: <Computer className="h-8 w-8 text-primary" />,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1000"
+      image: "computer.jpg"
     },
     {
       title: "Electrical Lab",
       description: "The electrical engineering lab provides hands-on experience with circuits, microcontrollers, and electrical systems. Students can work on real-world projects under expert supervision.",
       icon: <Beaker className="h-8 w-8 text-primary" />,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000"
+      image: "electrical.jpg"
     },
     {
       title: "Science Labs",
       description: "Our fully equipped science laboratories support practical learning in physics, chemistry, and biology. Modern equipment and safety protocols ensure an optimal learning environment.",
       icon: <Microscope className="h-8 w-8 text-primary" />,
-      image: "https://images.unsplash.com/photo-1532094349884-543019aff0ec?q=80&w=1000"
+      image: "phylab.jpg"
     },
     {
-      title: "Sports Complex",
-      description: "The sports complex includes indoor and outdoor facilities for basketball, football, swimming, tennis, and more. Professional coaching is available for all skill levels.",
+      title: "Physics Lab",
+      description: "The physics lab is designed for experiments and demonstrations that enhance theoretical knowledge. Students can explore concepts through practical applications.",
       icon: <Trophy className="h-8 w-8 text-primary" />,
-      image: "https://images.unsplash.com/photo-1471295253337-3ceaaedca402?q=80&w=1000"
+      image: "phylab1.jpg"
     },
     {
       title: "Student Clubs & Activities",
       description: "We offer a diverse range of clubs and extracurricular activities to enhance student life. From debate and robotics to music and arts, there's something for everyone to explore their interests.",
       icon: <Users className="h-8 w-8 text-primary" />,
-      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000"
+      image: "Activityg.jpg"
     }
   ];
 
