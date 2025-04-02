@@ -1,6 +1,9 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { Shield } from "lucide-react";
+import { Pill } from "lucide-react";
+
 import { Building2, Code2, TestTube } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -35,7 +38,7 @@ const Alumni = () => {
       year: "2021",
       degree: "Computer Science and Engineering",
       currentRole: "Computer Operator at Nepal Police",
-      icon: <Code2 className="w-8 h-8 text-accent" />,
+      icon: <Shield className="w-8 h-8 text-accent" />,
       image: "dinesh.jpg",
     },
     {
@@ -66,7 +69,7 @@ const Alumni = () => {
       name:"Pashupati Pashwan",
       year: "2023",
       degree: "Pharmacy",
-      icon: <Code2 className="w-8 h-8 text-accent" />,
+      icon: <Pill className="w-8 h-8 text-accent" />,
       image: "pashupati.jpg",
     },
     {
@@ -74,7 +77,7 @@ const Alumni = () => {
       year: "2023",
       degree: "Civil Engineering",
       university:"Pokhara University",
-      icon: <Code2 className="w-8 h-8 text-accent" />,
+      icon: <Building2 className="w-8 h-8 text-accent" />,
       image: "dipendra.jpg",
     },
   ];
@@ -100,18 +103,18 @@ const Alumni = () => {
                   <Badge variant="outline">{alum.year}</Badge>
                 </div>
                 <div className="flex items-start gap-4 w-full">
-                  <Avatar className="w-16 h-16">
+                  <Avatar className="w-20 h-40">
                     <AvatarImage src={alum.image} alt={alum.name} />
                     <AvatarFallback>{alum.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
                   </Avatar>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">{alum.name}</h3>
-                    <p className="text-muted-foreground text-sm mb-1">{alum.degree}</p>
-                    <p className="text-muted-foreground text-sm mb-2">{alum.university}</p>
+                    <p className="text-red-900 text-sm mb-2">{alum.degree}</p>
+                    <p className="text-blue-800 text-sm mb-2">{alum.university}</p>
                     <p className="text-sm font-medium text-accent">{alum.currentRole}</p>
                   </div>
                 </div>
-              </div>
+              </div> 
             </Card>
           ))}
         </div>
