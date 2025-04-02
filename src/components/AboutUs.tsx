@@ -1,7 +1,35 @@
-
-import { Play } from "lucide-react";
+import React, { useRef, useState } from 'react';
+import { Play, Volume2, VolumeX } from "lucide-react";
 
 const AboutUs = () => {
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+
+  const handleVideoPlay = () => {
+    const video = videoRef.current;
+    if (video && video.paused) {
+      video.play().catch(err => {
+        console.error("Error playing video:", err);
+      });
+    }
+  };
+
+  const handleVideoPause = () => {
+    const video = videoRef.current;
+    if (video && !video.paused) {
+      video.pause();
+    }
+  };
+
+  const toggleMute = (e) => {
+    e.stopPropagation(); // Prevent triggering parent div's events
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !video.muted;
+      setIsMuted(video.muted);
+    }
+  };
+
   return (
     <section id="about" className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,18 +53,33 @@ const AboutUs = () => {
               teaching methods and state-of-the-art facilities ensure that every student
               receives the best possible education.
             </p>
-            <div className="relative group cursor-pointer">
-            <video
-  controls
-  muted
-  onMouseEnter={(e) => e.currentTarget.play()}
-  onMouseLeave={(e) => e.currentTarget.pause()}
->
-  <source src="/janchetana.mp4" type="video/mp4" />
-</video>
+            <div 
+              className="relative group cursor-pointer" 
+              onMouseEnter={handleVideoPlay}
+              onMouseLeave={handleVideoPause}
+            >
+              <video
+                ref={videoRef}
+                className="w-full rounded-lg"
+                controls
+                muted={isMuted}
+                preload="metadata"
+              >
+                <source src="/janchetana.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <Play className="w-16 h-16 text-white" />
+                {/* <Play className="w-16 h-16 text-white" /> */}
               </div>
+              
+              {/* Custom mute/unmute button */}
+              <button 
+                onClick={toggleMute}
+                className="absolute bottom-3 right-16 bg-black/70 p-2 rounded-full text-white z-10"
+                aria-label={isMuted ? "Unmute" : "Mute"}
+              >
+                {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+              </button>
             </div>
           </div>
           <div className="space-y-8">
