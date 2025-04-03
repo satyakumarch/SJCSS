@@ -42,7 +42,7 @@ const MorningPrayer = () => {
 
           <div className="order-1 lg:order-2 overflow-hidden rounded-lg shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=1000"
+              src="prayer.jpg"
               alt="Students in morning prayer assembly"
               className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
             />

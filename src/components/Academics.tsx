@@ -10,8 +10,8 @@ const Academics = () => {
     "tour2.jpg",
     "tour3jpg.jpg",
     "tour4.jpg",
-  
-
+    "child.jpg",
+    "computer1.jpg",
   ];
 
   // Second slideshow state
@@ -21,8 +21,9 @@ const Academics = () => {
     "Activityg.jpg",
     "class.jpg",
     "exam.jpg",
-    "exam1.jpg",
+    "exam4.jpg",
     "exam2.jpg",
+    "prize.jpg",
 
   ];
 

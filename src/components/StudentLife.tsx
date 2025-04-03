@@ -50,7 +50,7 @@ const StudentLife = () => {
 
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <img
-              src="treacher.jpg"
+              src="quize.jpg"
               alt="Club Activities"
               className="w-full h-48 object-cover"
             />

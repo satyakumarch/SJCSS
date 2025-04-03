@@ -14,7 +14,6 @@ const AcademicsPage = () => {
         </div>
       </div>
       <Academics />
-      <Services />
       <Footer />
     </div>
   );

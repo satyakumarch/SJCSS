@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Form } from "./ui/form";
@@ -25,34 +24,37 @@ const AdmissionForm = () => {
     console.log(data);
     
     try {
-      // Google Sheet script URL
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxLceg1MrhHvn6Uz7OHKbcYjsVlY4Pkq7JbUVhSQKuNIV_RKJSVBKdedVqUJXxJbvvg/exec';
+      // This should be the URL to your Google Apps Script web app
+      // NOT the spreadsheet URL
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxpxx7Ezj_Y4iad_Z6mJlt6m8rMWbdhN8B-8HemTh8/dev';
       
-      // Format the data for the Google Sheet
+      // Convert the data object to a format suitable for transmission
       const formData = new FormData();
       
+      // Flatten nested objects if any exist
+      const flattenedData = flattenObject(data);
+      
       // Append all form fields to the FormData
-      Object.entries(data).forEach(([key, value]) => {
+      Object.entries(flattenedData).forEach(([key, value]) => {
         if (value !== undefined && value !== null) {
           formData.append(key, value.toString());
         }
       });
       
-      // Send the data to the Google Sheet
+      // Send the data to the Google Apps Script
       const response = await fetch(scriptURL, {
         method: 'POST',
-        body: formData
+        body: formData,
+        mode: 'no-cors' // Important when using Google Apps Script
       });
       
-      if (response.ok) {
-        setSubmitted(true);
-        toast({
-          title: "Success!",
-          description: "Your application has been submitted successfully!",
-        });
-      } else {
-        throw new Error('Network response was not ok');
-      }
+      // Since 'no-cors' mode doesn't give us response details,
+      // we assume success if no error is thrown
+      setSubmitted(true);
+      toast({
+        title: "Success!",
+        description: "Your application has been submitted successfully!",
+      });
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
@@ -63,6 +65,21 @@ const AdmissionForm = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Helper function to flatten nested objects
+  const flattenObject = (obj, prefix = '') => {
+    return Object.keys(obj).reduce((acc, key) => {
+      const pre = prefix.length ? `${prefix}.` : '';
+      
+      if (typeof obj[key] === 'object' && obj[key] !== null && !Array.isArray(obj[key])) {
+        Object.assign(acc, flattenObject(obj[key], pre + key));
+      } else {
+        acc[pre + key] = obj[key];
+      }
+      
+      return acc;
+    }, {});
   };
 
   const handleReset = () => {
@@ -91,9 +108,7 @@ const AdmissionForm = () => {
               <StudentInfoSection form={form} />
               <ParentSection form={form} />
               <AddressSection form={form} />
-              <PreviousSchoolSection form={form} />
               <AdmissionClassSection form={form} />
-              <MedicalSection form={form} />
               <EmergencyContactSection form={form} />
               
               <Button type="submit" className="w-full" disabled={isSubmitting}>

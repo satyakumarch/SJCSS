@@ -84,7 +84,7 @@ const AboutUs = () => {
           </div>
           <div className="space-y-8">
             <img
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+              src="teacher.jpg"
               alt="Students collaborating"
               className="rounded-lg shadow-lg w-full animate-fade-up"
             />

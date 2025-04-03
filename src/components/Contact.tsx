@@ -59,7 +59,7 @@ const Contact = () => {
                 </p>
                 <p className="flex items-center text-gray-600">
                   <span className="font-semibold mr-2">Email:</span>
-                  info@janchetana.edu
+                  janchetanacsschool@gmail.com
                 </p>
               </div>
             </div>

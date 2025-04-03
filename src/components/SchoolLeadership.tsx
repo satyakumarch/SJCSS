@@ -10,10 +10,10 @@ import {
 const SchoolLeadership = () => {
   const leaders = [
     {
-      name: "Dr. James Wilson",
+      name: "Arjun Prasad Khanal",
       position: "Chancellor",
-      bio: "Dr. Wilson has over 30 years of experience in education and has led our institution to numerous accolades and recognitions.",
-      image: "satya12.jpg",
+      bio: "Arjun prasad has over 30 years of experience in education and has led our institution to numerous accolades and recognitions.",
+      image: "arjunpra.jpg",
     },
     {
       name: "Mr.Devnand Thakur ",

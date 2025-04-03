@@ -5,56 +5,56 @@ const Teachers = () => {
       name: "Arjun Prasad Khanal",
       image: "Arjun.jpg",
       qualification: "Ph.D. in Education",
-      degrees: ["B.Ed", "M.Ed", "Ph.D. (Education)"],
+      degrees: ["9847052183"],
       subject: "Mathematics"
     },
     {
       name: "Devnand Thakur",
       image: "devnanad.jpg",
-      qualification: "",
-      degrees: [ "B.Ed in English", "M.A (English)",],
+      qualification: "B.Ed in English",
+      degrees: [ "9807585951"],
       subject: "English"
     },
     {
       name: "Dharampal Chaudhary",
       image: "dharampal.jpg",
       qualification: "Master in Nepali",
-      degrees: ["B.A (English)", "M.A (Literature)", "Ph.D. (Literature)"],
+      degrees: ["9811545242"],
       subject: "Nepali/Accountant"
     },
     {
       name: "Ram Prakash Chaudhary",
       image: "ramPrakash.jpg",
-      qualification: "Engineering in Computer Science",
-      degrees: ["bechelor in Electrical and Electronic Engineering"],
+      qualification: "Bechelor in Electrical and Electronic Engineering",
+      degrees: ["9847167709"],
       subject: "Computer Programming"
     },
     {
       name: "Kaushal Kishor Chaudhary",
       image: "kaushal.jpg",
       qualification: "Masters in English/CETVT",
-      degrees: ["B.Sc (Physics)", "M.Sc (Physics)", "B.Ed"],
+      degrees: ["9844714007"],
       subject: "English/Computer"
     },
     {
       name: "Najraj Chaudhary",
       image: "kaka.jpg",
-      qualification: "bachelor in Computer Application",
-      degrees: ["B.Sc (Physics)", "M.Sc (Physics)", "B.Ed"],
+      qualification: "Bachelor in Computer Application",
+      degrees: [ "........"],
       subject: "Computer Science"
     },
     {
       name: "Bishnu Sharma",
       image: "bishnujpg.jpg",
       qualification: "Bechelor in Computer Application",
-      degrees: ["B.Sc (Physics)", "M.Sc (Physics)", "B.Ed"],
+      degrees: ["9847190727"],
       subject: "Computer Science"
     },
     {
       name: "Mohamad Aslam",
       image: "aslam.jpg",
-      qualification: "Masters in Physics",
-      degrees: ["B.Sc (Physics)", "M.Sc (Physics)", "B.Ed"],
+      qualification: "B.Sc in Physics",
+      degrees: ["9808705421"],
       subject: "Physics"
     }
   ];

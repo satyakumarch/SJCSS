@@ -94,9 +94,9 @@ const Alumni = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {alumni.map((alum, index) => (
-            <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+            <Card key={index} className="p-6 hover:shadow-lg transition-shadow bg-blue-100 ">
               <div className="flex flex-col items-start gap-4">
                 <div className="flex items-center justify-between w-full">
                   {alum.icon}

@@ -59,7 +59,7 @@ const Footer = () => {
               <li>Kapilvastu, Nepal</li>
               
               <li>Phone: +977 9807585951</li>
-              <li>Email: info@Janchetana.edu</li>
+              <li>Email: janchetanacsschool@gmail.com</li>
             </ul>
           </div>
 
