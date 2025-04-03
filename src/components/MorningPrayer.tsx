@@ -13,7 +13,7 @@ const MorningPrayer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="order-2 lg:order-1">
             <div className="prose prose-lg max-w-none text-gray-600">
-              <p>
+              <p className="text-lg font-semibold mb-8">
                 सयौं थुँगा फूलका हामी, एउटै माला नेपाली ।<br/>
                 सार्वभौम भइ फैलिएका, मेची-माहाकाली ॥<br/><br/>
 
@@ -23,11 +23,8 @@ const MorningPrayer = () => {
                 ज्ञानभूमि, शान्तिभूमि, तराई, पहाड, हिमाल ।<br/>
                 अखण्ड यो प्यारो हाम्रो मातृभूमि नेपाल ॥<br/><br/>
 
-                गौतम, बुद्ध, शान्तिका अग्रदूत विश्वका ।<br/>
-                शान्ति नै सन्देश दिन्छौं, नेपालै भूमिमा ॥<br/><br/>
-
-                नेपाली प्रभु, नेपाली धर्म, संस्कृति छ शान ।<br/>
-                जय जय जय नेपाल, नेपालीको महान ॥ <br/>         </p>
+                बहुल जाति भाषा धर्म संस्कृति छन् विशाल  ।<br/>
+                अग्रगामी राष्ट्र हाम्रो जय जय नेपाल॥<br/><br/>        </p>
               {/* <p className="mt-4">
                 The assembly includes prayers, the national anthem, important announcements, and sometimes special performances by students. It's an essential part of our holistic education approach.
               </p>
