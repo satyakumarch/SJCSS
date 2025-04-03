@@ -6,7 +6,7 @@ const Teachers = () => {
       image: "Arjun.jpg",
       qualification: "Ph.D. in Education",
       degrees: ["9847052183"],
-      subject: "Mathematics"
+      subject: "Social Studies"
     },
     {
       name: "Devnand Thakur",
