@@ -51,7 +51,7 @@ const AdmissionClassSection = ({ form }: AdmissionClassSectionProps) => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="hindi" id="hindiLang" />
-                    <label htmlFor="hindiLang">Hindi</label>
+                    <label htmlFor="hindiLang">Nepali</label>
                   </div>
                   <div className="flex items-center space-x-2">
                     <RadioGroupItem value="other" id="otherLang" />

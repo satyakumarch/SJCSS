@@ -131,7 +131,7 @@ const StudentInfoSection = ({ form }: StudentInfoSectionProps) => {
           name="aadhar"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Aadhar Number (if applicable)</FormLabel>
+              <FormLabel>Citizenship Number (if applicable)</FormLabel>
               <FormControl>
                 <Input {...field} />
               </FormControl>
