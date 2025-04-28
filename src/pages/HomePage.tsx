@@ -6,6 +6,10 @@ import MorningPrayer from "@/components/MorningPrayer";
 import SchoolLeadership from "@/components/SchoolLeadership";
 import Footer from "@/components/Footer";
 import { useEffect, useRef } from "react";
+import Services from "@/components/Services";
+import Academics from "@/components/Academics";
+import StudentLife from "@/components/StudentLife";
+import Alumni from "@/components/Alumni";
 
 const HomePage = () => {
   // Create refs for cleanup functions
@@ -135,6 +139,10 @@ const HomePage = () => {
       <Navigation />
       <Hero />
       <AboutUs />
+      <Services/>
+      <Academics/>
+      <StudentLife/>
+      <Alumni/>
       <MorningPrayer />
       <SchoolLeadership />
       <Footer />
