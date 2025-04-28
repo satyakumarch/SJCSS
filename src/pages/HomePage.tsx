@@ -138,13 +138,13 @@ const HomePage = () => {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
       <Hero />
+      <SchoolLeadership />
       <AboutUs />
       <Services/>
       <Academics/>
       <StudentLife/>
       <Alumni/>
       <MorningPrayer />
-      <SchoolLeadership />
       <Footer />
     </div>
   );
