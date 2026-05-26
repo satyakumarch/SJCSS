@@ -61,7 +61,7 @@ const AboutUs = () => {
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Shree Janchetana Community Secondary School has been a beacon of quality
-                education in Kapilvastu since 1994. We are committed to providing a
+                education in Kapilvastu since . We are committed to providing a
                 nurturing environment where students discover their potential and develop
                 into well-rounded individuals.
               </p>

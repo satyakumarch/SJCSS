@@ -56,7 +56,7 @@ const Footer = () => {
               </div>
               <div>
                 <div className="font-bold text-lg leading-tight">SJCSS</div>
-                <div className="text-white/50 text-xs">Est. 1994</div>
+                <div className="text-white/50 text-xs">Est. 2060</div>
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">

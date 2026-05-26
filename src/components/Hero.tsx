@@ -63,7 +63,7 @@ const Hero = () => {
           {/* Subheading */}
           <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up delay-100">
             Nurturing young minds with quality education, strong values, and a commitment
-            to excellence since 1994 — in the heart of Kapilvastu, Nepal.
+            to excellence since 2060 — in the heart of Kapilvastu, Nepal.
           </p>
 
           {/* CTA Buttons */}

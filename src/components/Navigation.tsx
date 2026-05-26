@@ -67,7 +67,7 @@ const Navigation = () => {
               <div className={`text-xs leading-tight transition-colors duration-300 ${
                 isScrolled ? "text-gray-500" : "text-white/70"
               }`}>
-                Est. 1994
+                Est. 2060
               </div>
             </div>
           </Link>
