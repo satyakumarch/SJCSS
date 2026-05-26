@@ -1,5 +1,5 @@
-
 import Navigation from "@/components/Navigation";
+import PageHero from "@/components/PageHero";
 import StudentLife from "@/components/StudentLife";
 import Footer from "@/components/Footer";
 
@@ -7,11 +7,11 @@ const StudentLifePage = () => {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
-      <div className="pt-20 bg-primary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary text-center">Student Life</h1>
-        </div>
-      </div>
+      <PageHero
+        title="Student Life"
+        subtitle="Experience a vibrant campus life filled with sports, arts, clubs, and events that shape well-rounded individuals ready for the world."
+        breadcrumb="Student Life"
+      />
       <StudentLife />
       <Footer />
     </div>

@@ -1,80 +1,135 @@
-
-import { 
-  Beaker, 
-  Computer, 
-  Trophy, 
-  Users, 
-  Microscope 
-} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Beaker, Computer, Trophy, Users, Microscope, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
-      title: "Student Computer Lab",
-      description: "Our state-of-the-art computer labs are equipped with the latest technology and software to support your learning needs. Students have access to high-speed internet and specialized programs for various courses.",
-      icon: <Computer className="h-8 w-8 text-primary" />,
-      image: "computer.jpg"
+      title: "Computer Lab",
+      description:
+        "State-of-the-art computer labs equipped with the latest technology, high-speed internet, and specialized software to support modern learning needs.",
+      icon: <Computer className="h-6 w-6" />,
+      image: "computer.jpg",
+      color: "from-blue-500/20 to-blue-600/10",
+      iconBg: "bg-blue-100 text-blue-600",
     },
     {
       title: "Electrical Lab",
-      description: "The electrical engineering lab provides hands-on experience with circuits, microcontrollers, and electrical systems. Students can work on real-world projects under expert supervision.",
-      icon: <Beaker className="h-8 w-8 text-primary" />,
-      image: "electrical.jpg"
+      description:
+        "Hands-on experience with circuits, microcontrollers, and electrical systems. Students work on real-world projects under expert supervision.",
+      icon: <Beaker className="h-6 w-6" />,
+      image: "electrical.jpg",
+      color: "from-yellow-500/20 to-yellow-600/10",
+      iconBg: "bg-yellow-100 text-yellow-600",
     },
     {
       title: "Science Labs",
-      description: "Our fully equipped science laboratories support practical learning in physics, chemistry, and biology. Modern equipment and safety protocols ensure an optimal learning environment.",
-      icon: <Microscope className="h-8 w-8 text-primary" />,
-      image: "lab.jpg"
+      description:
+        "Fully equipped laboratories for physics, chemistry, and biology. Modern equipment and safety protocols ensure an optimal learning environment.",
+      icon: <Microscope className="h-6 w-6" />,
+      image: "lab.jpg",
+      color: "from-green-500/20 to-green-600/10",
+      iconBg: "bg-green-100 text-green-600",
     },
     {
       title: "Physics Lab",
-      description: "The physics lab is designed for experiments and demonstrations that enhance theoretical knowledge. Students can explore concepts through practical applications.",
-      icon: <Trophy className="h-8 w-8 text-primary" />,
-      image: "phylab1.jpg"
+      description:
+        "Dedicated physics lab for experiments and demonstrations that bridge theoretical knowledge with practical applications.",
+      icon: <Trophy className="h-6 w-6" />,
+      image: "phylab1.jpg",
+      color: "from-purple-500/20 to-purple-600/10",
+      iconBg: "bg-purple-100 text-purple-600",
     },
     {
       title: "Student Clubs & Activities",
-      description: "We offer a diverse range of clubs and extracurricular activities to enhance student life. From debate and robotics to music and arts, there's something for everyone to explore their interests.",
-      icon: <Users className="h-8 w-8 text-primary" />,
-      image: "Activityg.jpg"
-    }
+      description:
+        "A diverse range of clubs and extracurricular activities — from debate and robotics to music and arts — for every student to explore their interests.",
+      icon: <Users className="h-6 w-6" />,
+      image: "Activityg.jpg",
+      color: "from-rose-500/20 to-rose-600/10",
+      iconBg: "bg-rose-100 text-rose-600",
+    },
   ];
 
   return (
-    <section id="services" className="py-20 bg-secondary">
+    <section id="services" className="py-24 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">
-            Our Services
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover the wide range of facilities and services we offer to enhance your academic experience.
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="section-label">What We Offer</span>
+          <h2 className="section-title">Our Facilities & Services</h2>
+          <div className="gold-divider" />
+          <p className="section-subtitle">
+            Discover the wide range of world-class facilities and services we offer
+            to enhance your academic experience and personal growth.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
-            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" 
+        {/* Featured first card (full width) */}
+        <div className="mb-8">
+          <div className="group relative bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover
+                          transition-all duration-300 hover:-translate-y-1">
+            <div className="grid md:grid-cols-2">
+              <div className="h-64 md:h-auto overflow-hidden">
+                <img
+                  src={services[0].image}
+                  alt={services[0].title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <CardHeader className="flex flex-row items-center gap-4 pt-6">
-                {service.icon}
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-sm text-gray-600">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+              <div className="p-8 flex flex-col justify-center">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${services[0].iconBg}`}>
+                  {services[0].icon}
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-3">{services[0].title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-6">{services[0].description}</p>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 text-accent font-semibold text-sm
+                             hover:gap-3 transition-all duration-200"
+                >
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Remaining cards grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.slice(1).map((service, index) => (
+            <div
+              key={index}
+              className="group bg-white rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover
+                         transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="h-44 overflow-hidden relative">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${service.color}`} />
+              </div>
+              <div className="p-5">
+                <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${service.iconBg}`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-base font-bold text-primary mb-2">{service.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed line-clamp-3">{service.description}</p>
+              </div>
+            </div>
           ))}
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-12">
+          <Link
+            to="/services"
+            className="btn-primary"
+          >
+            View All Facilities
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
         </div>
       </div>
     </section>

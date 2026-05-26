@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +11,6 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
     --radius: 0.5rem;
   }
 
@@ -20,32 +20,80 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
   }
 
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
-
   ::-webkit-scrollbar-track {
-    background: transparent;
+    background: #f0f4f8;
   }
-
   ::-webkit-scrollbar-thumb {
-    @apply bg-accent/20 rounded-full;
+    background: #c8922a;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9a6e1a;
+  }
+}
+
+@layer components {
+  /* Section heading pattern */
+  .section-label {
+    @apply inline-block text-xs font-semibold tracking-widest uppercase text-accent mb-3;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accent/30;
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-primary mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-gray-500 max-w-2xl mx-auto text-base leading-relaxed;
+  }
+
+  /* Gold divider */
+  .gold-divider {
+    @apply w-16 h-1 bg-accent rounded-full mx-auto mb-6;
+  }
+
+  /* Card hover effect */
+  .hover-card {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover;
+  }
+
+  /* Button primary */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-accent text-white font-semibold rounded-lg
+           hover:bg-accent/90 transition-all duration-200 shadow-gold hover:shadow-lg;
+  }
+
+  /* Button outline */
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary font-semibold
+           rounded-lg hover:bg-primary hover:text-white transition-all duration-200;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
   }
 }
 
 /* Animations */
 @keyframes slide-down {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(200%);
-  }
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(200%); }
 }
+
+/* Staggered animation delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
